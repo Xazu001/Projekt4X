@@ -154,6 +154,18 @@ function menuclick(){
     });
 };
 
+
+document.querySelector(".btg-icon").addEventListener("click", chngicon);
+
+function chngicon(){
+    if(isNavBarLocked){
+        document.querySelector(".fa-solid").classList.remove("fa-bars")
+        document.querySelector(".fa-solid").classList.add("fa-x")
+    }else{
+        document.querySelector(".fa-solid").classList.remove("fa-x")
+        document.querySelector(".fa-solid").classList.add("fa-bars")
+    }
+}
 // const scrollPosition = window.scrollY;
 
 // setInterval(if (scrollPosition <90){
