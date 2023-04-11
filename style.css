@@ -527,8 +527,7 @@ z-index: 15;
 }
 
 .dshow{
-    animation-delay: 0.2s;
-    transition: 0.5s;
+    transition: 1s;
 transform: translateX(0%);
 }
 
