@@ -58,10 +58,11 @@ nav{
     height: 50px;
     width: 50px;
     font-size: 30px;
-    outline: 2px var(--mainwb-color) solid;
+    outline: 3px var(--mainwb-color) solid;
     color: var(--mainwb-color);
     display: none;
-
+background-color: white;
+border: none;
 }
 
 
