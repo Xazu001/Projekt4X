@@ -5,7 +5,7 @@ setInterval(function () {
     if (counter > 3) {
         counter = 1;
     }
-}, 5000)
+}, 10000)
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
@@ -145,7 +145,7 @@ window.addEventListener("scroll", () => {
 
 document.querySelectorAll("a").forEach(i => i.addEventListener("click", menuclick));
 
-function menuclick(){
+function menuclick() {
     console.log("a");
     const btgmain = document.querySelector(".btgmenu");
     btgmain.animate(animationFrames, animationSettings).finished.then(() => {
@@ -157,18 +157,18 @@ function menuclick(){
 document.querySelector(".btg-icon").addEventListener("click", chngicon);
 document.querySelectorAll(".btgmenu-main a").forEach(i => i.addEventListener("click", chngicon2));
 
-function chngicon(){
-    if(isNavBarLocked){
+function chngicon() {
+    if (isNavBarLocked) {
         document.querySelector(".fa-solid").classList.remove("fa-bars")
         document.querySelector(".fa-solid").classList.add("fa-x")
-    }else{
+    } else {
         document.querySelector(".fa-solid").classList.remove("fa-x")
         document.querySelector(".fa-solid").classList.add("fa-bars")
     }
 }
-function chngicon2(){
-        document.querySelector(".fa-solid").classList.remove("fa-x")
-        document.querySelector(".fa-solid").classList.add("fa-bars")
+function chngicon2() {
+    document.querySelector(".fa-solid").classList.remove("fa-x")
+    document.querySelector(".fa-solid").classList.add("fa-bars")
 }
 // const scrollPosition = window.scrollY;
 

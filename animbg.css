@@ -17,6 +17,7 @@
 }
 
 .slide{
+    position: relative;
     width: 20%;
     transition: 2s;
     z-index: -10;
@@ -110,3 +111,119 @@ justify-content: center;
 #radio3:checked ~ .navigation-auto .auto-btn3{
     background-color: var(--mainwb-color);
 }
+
+.ablock{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    border-radius: 63% 26% 88% 13% / 78% 7% 84% 15% ;
+    background: rgb(30,75,255);
+background: linear-gradient(90deg, rgba(30,75,255,1) 0%, rgba(255,255,255,0.5) 50%, rgba(0,0,0,1) 100%);
+animation-name: rotate;
+animation-duration: 7s;
+animation-iteration-count: infinite;
+animation-direction: alternate-reverse;
+}
+
+.ablock::after{
+    right: -30%;
+    transform: rotate(30deg);
+    position: absolute;
+    z-index: 10;
+    content: '';
+    height: 300px;
+    width: 300px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(30,75,255,1) 100%);
+    border-radius: 26% 74% 11% 89% / 11% 94% 6% 89% ;
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.ablock-main{
+    filter: blur(29px);
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(30deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.floatinglights-main{
+    animation: fadeIn 1 1s ease-out;
+
+}
+
+.light {
+    position: absolute;
+    width: 15px;
+    height: 200px;
+    opacity: 0.2;
+    background-color: var(--mainwb-color);
+    opacity: 0;
+    top: 100vh;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+}
+
+.x1{
+   animation: floatUp 4s infinite linear;
+ transform: scale(1.0);
+  }
+  .x2{
+    animation: floatUp 7s infinite linear;
+  transform: scale(0.9);
+  left: 15%;
+   }
+   .x3{
+    animation: floatUp 2.5s infinite linear;
+  transform: scale(1.2);
+  left: -15%;
+   }
+   .x4{
+    animation: floatUp 4.5s infinite linear;
+  transform: scale(0.7);
+  left: -34%;
+   }
+   .x5{
+    animation: floatUp 8s infinite linear;
+  transform: scale(2.2);
+  left: -57%;
+   }
+   .x6{
+    animation: floatUp 3s infinite linear;
+  transform: scale(0.8);
+  left: -81%;
+   }
+   .x7{
+    animation: floatUp 5.3s infinite linear;
+  transform: scale(3.2);
+  left: 37%;
+   }
+   .x8{
+    animation: floatUp 4.7s infinite linear;
+  transform: scale(1.7);
+  left: 62%;
+   }
+   .x9{
+    animation: floatUp 4.1s infinite linear;
+  transform: scale(0.9);
+  left: 85%;
+   }
+  
+
+  @keyframes floatUp{
+    0%{top: 100vh; opacity: 0; transform: skewY(20deg);}
+    25%{opacity: 1; transform: skewY(20deg);}
+    50%{top: 0vh; opacity: .8; transform: skewY(20deg);}
+    75%{opacity: 0.5; transform: skewY(20deg);}
+    100%{top: -100vh; opacity: 0; transform: skewY(20deg);}
+  }
