@@ -23,7 +23,6 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 document.querySelectorAll(".joinus").forEach(i => i.addEventListener("mouseover", mouseEnter));
 document.querySelectorAll(".joinus").forEach(i => i.addEventListener("mouseout", mouseout));
-document.querySelectorAll(".joinus").forEach(i => i.addEventListener("touchstart", mouseEnter));
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");
 
