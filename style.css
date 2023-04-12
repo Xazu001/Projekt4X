@@ -226,6 +226,7 @@ transform: translateX(-100%);
 .our-team-block:hover > .our-team-text p{
     transform: translate(0%);
     opacity: 1;
+    transition: 1s;
 }
 
 
@@ -245,7 +246,8 @@ transform: translateX(-100%);
     width: 100%;
     object-fit: cover;
     transform: translateY(-100%);
-    transition: 1s;
+    /* transition: 1s; */
+    transition: 2.5s;
     opacity: 0;
 }
 .our-team-text{
@@ -255,7 +257,7 @@ transform: translateX(-100%);
     background-color: var(--ourteam-text);
     padding-top: 24px;
     transform: translateY(25%);
-    transition: 1s;
+    transition: 2.5s;
     padding: 2%;
     
 }
