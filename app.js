@@ -161,9 +161,11 @@ function chngicon() {
     if (isNavBarLocked) {
         document.querySelector(".fa-solid").classList.remove("fa-bars")
         document.querySelector(".fa-solid").classList.add("fa-x")
+        isNavBarLocked = false;
     } else {
         document.querySelector(".fa-solid").classList.remove("fa-x")
         document.querySelector(".fa-solid").classList.add("fa-bars")
+
     }
 }
 function chngicon2() {

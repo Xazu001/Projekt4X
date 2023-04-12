@@ -174,46 +174,46 @@ animation-direction: alternate-reverse;
     margin: auto;
 }
 
-.x1{
+.l1{
    animation: floatUp 4s infinite linear;
  transform: scale(1.0);
   }
-  .x2{
+  .l2{
     animation: floatUp 7s infinite linear;
   transform: scale(0.9);
   left: 15%;
    }
-   .x3{
+   .l3{
     animation: floatUp 2.5s infinite linear;
   transform: scale(1.2);
   left: -15%;
    }
-   .x4{
+   .l4{
     animation: floatUp 4.5s infinite linear;
   transform: scale(0.7);
   left: -34%;
    }
-   .x5{
+   .l5{
     animation: floatUp 8s infinite linear;
   transform: scale(2.2);
   left: -57%;
    }
-   .x6{
+   .l6{
     animation: floatUp 3s infinite linear;
   transform: scale(0.8);
   left: -81%;
    }
-   .x7{
+   .l7{
     animation: floatUp 5.3s infinite linear;
   transform: scale(3.2);
   left: 37%;
    }
-   .x8{
+   .l8{
     animation: floatUp 4.7s infinite linear;
   transform: scale(1.7);
   left: 62%;
    }
-   .x9{
+   .l9{
     animation: floatUp 4.1s infinite linear;
   transform: scale(0.9);
   left: 85%;
@@ -227,3 +227,165 @@ animation-direction: alternate-reverse;
     75%{opacity: 0.5; transform: skewY(20deg);}
     100%{top: -100vh; opacity: 0; transform: skewY(20deg);}
   }
+
+  .ax-main{
+    position: relative;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .axl{
+    position: absolute;
+    width: 10px;
+    height: 70px;
+    background-color: var(--mainwb-color);
+    /* transform: rotate(45deg); */
+    /* animation: axl 3s infinite linear reverse; */
+  }
+
+  .axr{
+    position: absolute;
+    width: 10px;
+    height: 70px;
+    background-color: var(--mainwb-color);
+    /* animation: axr 3s infinite linear reverse; */
+  }
+
+  @keyframes axl {
+    0%{
+        transform: rotate(-45deg) translateY(50vh);
+    }50%{
+        transform: rotate(-45deg) translateY(0%);
+    }100%{
+        transform: rotate(-45deg) translateY(-50vh);
+    }
+  }
+
+  @keyframes axr {
+    0%{
+        transform: rotate(45deg) translateY(-50vh);
+    }50%{
+        transform: rotate(45deg) translateY(0%);
+    }100%{
+        transform: rotate(45deg) translateY(50vh);
+    }
+  }
+
+  .ax1{
+    left: 10%;
+  }
+
+  .ax2{
+    top: -20%;
+    left: 20%;
+  }
+
+  .ax3{
+    top: -15%;
+    left: -15%;
+  }
+
+  .ax4{
+    top: -25%;
+    left: -30%;
+  }
+
+  .ax5{
+    top: 10%;
+    left: -42%;
+  }
+
+  .ax6{
+    top: 23%;
+    left: 45%;
+  }
+  .ax7{
+    top: 13%;
+    left: -60%;
+  }
+
+.ax1 > .axl{
+    animation: axl 2s infinite linear reverse;
+}
+
+.ax1 > .axr{
+    animation: axr 2s infinite linear reverse;
+}
+
+.ax2 > .axl{
+    animation: axl 1.5s infinite linear reverse;
+}
+
+.ax2 > .axr{
+    animation: axr 1.5s infinite linear reverse;
+}
+
+.ax3 > .axl{
+    animation: axl 1s infinite linear reverse;
+}
+
+.ax3 > .axr{
+    animation: axr 1s infinite linear reverse;
+}
+
+.ax4 > .axl{
+    animation: axl 2.3s infinite linear reverse;
+}
+
+.ax4 > .axr{
+    animation: axr 2.3s infinite linear reverse;
+}
+
+
+.ax5 > .axl{
+    animation: axl 1.3s infinite linear reverse;
+}
+
+.ax5 > .axr{
+    animation: axr 1.3s infinite linear reverse;
+}
+
+.ax6 > .axl{
+    animation: axl 2s infinite linear reverse;
+}
+
+.ax6 > .axr{
+    animation: axr 2s infinite linear reverse;
+}
+
+.ax7 > .axl{
+    animation: axl 2.7s infinite linear reverse;
+}
+
+.ax7 > .axr{
+    animation: axr 2.7s infinite linear reverse;
+}
+.ax > .axl{
+    animation: axl 1.8s infinite linear reverse;
+}
+
+.ax > .axr{
+    animation: axr 1.8s infinite linear reverse;
+}
+
+
+@media screen and (max-width:992px){
+    .ax3{
+        display: none;
+    }
+
+    .ax7{
+        display: none;
+    }
+
+    .ax{
+        display: none;
+    }
+
+    .ax5{
+        display: none;
+    }
+    .ax6{
+        display: none;
+    }
+}
