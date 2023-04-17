@@ -397,6 +397,70 @@ transition: 0.5s;
     margin-left: 10px;
     transition: 0.5s;
 }
+
+
+.reviews{
+    position: relative;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.re-slides{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.re-block{
+    position: relative;
+    min-width: 50%;
+    transition: 2s;
+    z-index: -10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+
+
+
+.re-buttons{
+    padding: 0 50px;
+    z-index: 20;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.re-buttons button{
+    border: 1px solid white;
+    padding: 10px 10px;
+    border-radius: 100%;
+    cursor: pointer;
+    height: 10px;
+}
+
+
+
+.re-block h1{
+    font-size: 4rem;
+    color: var(--mainwb-color);
+}
+
+
+.slone{
+transform: translateX(-50%);
+}
+
 /* top section start*/
 
 
