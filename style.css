@@ -535,6 +535,11 @@ nav {
     padding-left: 24px;
     padding-right: 24px;
   }
+  .navposition {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+  }
   .x {
     position: absolute;
   }
