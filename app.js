@@ -103,14 +103,14 @@ function toggleBtg(shouldBeShown) {
     if (shouldBeShown) {
         btgmain.style.display = "block";
         btgmain.animate([animationFrames[1], animationFrames[0]], animationSettings);
-        document.querySelector("main").style.display = "none";
-        document.querySelector("nav").classList.add("navposition")
+        // document.querySelector("main").style.display = "none";
+        // document.querySelector("nav").classList.add("navposition")
     }
     else {
         btgmain.animate(animationFrames, animationSettings).finished.then(() => {
             btgmain.style.display = "none";
-            document.querySelector("main").style.display = "block";
-            document.querySelector("nav").classList.remove("navposition")
+            // document.querySelector("main").style.display = "block";
+            // document.querySelector("nav").classList.remove("navposition")
         });
     }
 }
@@ -154,8 +154,8 @@ function menuclick() {
     const btgmain = document.querySelector(".btgmenu");
     btgmain.animate(animationFrames, animationSettings).finished.then(() => {
         btgmain.style.display = "none";
-        document.querySelector("main").style.display = "block";
-        document.querySelector("nav").classList.remove("navposition")
+        // document.querySelector("main").style.display = "block";
+        // document.querySelector("nav").classList.remove("navposition")
     });
 };
 
@@ -167,11 +167,11 @@ function chngicon() {
     if (isNavBarLocked) {
         document.querySelector(".fa-solid").classList.remove("fa-bars")
         document.querySelector(".fa-solid").classList.add("fa-x")
-        isNavBarLocked = false;
+        // isNavBarLocked = false;
     } else {
         document.querySelector(".fa-solid").classList.remove("fa-x")
         document.querySelector(".fa-solid").classList.add("fa-bars")
-
+        // isNavBarLocked = true;
     }
 }
 function chngicon2() {
