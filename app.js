@@ -172,9 +172,46 @@ function chngicon2() {
     document.querySelector(".fa-solid").classList.remove("fa-x")
     document.querySelector(".fa-solid").classList.add("fa-bars")
 }
-// const scrollPosition = window.scrollY;
 
-// setInterval(if (scrollPosition <90){
+let slcounter = 3;
+
+document.querySelector(".re-buttons .fa-angle-left").addEventListener("click", () => updateSlide(slcounter - 1));
+document.querySelector(".re-buttons .fa-angle-right").addEventListener("click", () => updateSlide(slcounter + 1));
 
 
-// }, Infinity) 
+// function updateSlide(num) {
+//     const isRight = (slcounter - num) == -1;
+//     if (isRight && slcounter == 5) return;
+//     if (!isRight && slcounter == 1) return;
+//     slcounter = num;
+//     const reSlides = document.querySelector(".re-slides");
+//     const slideWidth = window.innerWidth < 992 ? 100 : 50;
+//     const wholeSlideWidth = window.innerWidth < 992 ? 300 : 150
+//     reSlides.style.transform = `translateX(${wholeSlideWidth - slcounter * slideWidth}%)`;
+// }
+
+let reSlides = document.querySelector(".re-slides").classList;
+function updateSlide(num) {
+    slcounter = num;
+    if (slcounter == 1) {
+        reSlides.remove("sltwo", "slthree", "slfour", "slfive")
+        reSlides.add("slone")
+    }
+    if (slcounter == 2) {
+        reSlides.remove("slone", "slthree", "slfour", "slfive")
+        reSlides.add("sltwo")
+    }
+    if (slcounter == 3) {
+        reSlides.remove("sltwo", "slone", "slfour", "slfive")
+        reSlides.add("slthree")
+    }
+    if (slcounter == 4) {
+        reSlides.remove("sltwo", "slthree", "slone", "slfive")
+        reSlides.add("slfour")
+    }
+    if (slcounter == 5) {
+        reSlides.remove("sltwo", "slthree", "slfour", "slone")
+        reSlides.add("slfive")
+    }
+
+}
