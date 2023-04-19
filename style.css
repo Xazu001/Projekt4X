@@ -648,8 +648,11 @@ width: 80% !important;
     justify-content: center;
     align-items: center;
     z-index: -10;
-    background-color: rgba(0,0,0,0);
+    background-color: none;
+    border-radius: 0;
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
   }
+
   .re-buttons{
     padding: 0 0;
   }
