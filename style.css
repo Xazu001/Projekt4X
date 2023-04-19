@@ -71,8 +71,6 @@ nav {
   width: 100%;
   overflow: hidden;
   z-index: 90;
-
-  /* display: none; */
 }
 
 .btgmenu-main {
@@ -110,7 +108,6 @@ nav {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  /* background-color: var(--mainwb-color); */
 }
 
 .welcome h1 {
@@ -194,11 +191,40 @@ nav {
 }
 
 .our-team-main {
+  position: relative;
   display: flex;
   width: 100%;
   overflow: hidden;
   margin-top: 24px;
   scroll-snap-type: x mandatory;
+}
+
+.our-team{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.noopacity{
+  opacity: 0;
+}
+
+.ucanslide{
+  scroll-snap-align:none;
+  isolation: isolate;
+  position: absolute;
+  background-color: rgba(255,255,255,.3);
+  color: black;
+  border-radius: 24px;
+  padding: 7px 12px;
+  justify-self: center;
+  z-index: 10;
+  font-size: 1.5rem;
+  margin-top: 78px;
+  /* display: none; */
+  align-self: center;
+  transition: 1s;
 }
 
 .our-team-block {
@@ -387,15 +413,20 @@ nav {
   transition: 0.5s;
 }
 
+.reviews-main{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .reviews {
   position: relative;
-  height: 600px;
+  height: 400px;
   width: 100%;
   overflow: hidden;
 }
 
 .re-slides {
-  height: 600px;
   display: flex;
   justify-content: center;
   transform: translateX(0%);
@@ -408,13 +439,24 @@ nav {
   transition: 2s;
   z-index: -10;
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.re-block p{
+text-align: end;
+color: var(--mainwb-color);
+font-size: 2rem;
+font-weight: bold;
+width: 80% !important;
 }
 
 .re-buttons {
   padding: 0 50px;
+  padding-bottom: 100px;
   z-index: 20;
   position: absolute;
   display: flex;
@@ -422,11 +464,11 @@ nav {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .re-buttons button {
-  background-color: white;
+  border: 2px solid white;
   border-radius: 100%;
   cursor: pointer;
   height: 30px;
@@ -435,8 +477,12 @@ nav {
   justify-content: center;
   align-items: center;
   z-index: -10;
-  outline: none;
-  border: none;
+  background-color: rgba(0,0,0,0);
+}
+
+.re-buttons button i{
+  font-size: 18px;
+  color: white;
 }
 
 .re-block h1 {
@@ -463,9 +509,6 @@ nav {
   transform: translateX(-100%);
 }
 
-/* top section start*/
-
-/* top section end*/
 
 /* media */
 
@@ -594,6 +637,28 @@ nav {
   .copyright i {
     font-size: 1.5rem;
   }
+  .re-buttons button {
+    /* background-color: white; */
+    /* border: 2px solid var(--mainwb-color); */
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -10;
+    background-color: rgba(0,0,0,0);
+  }
+  .re-buttons{
+    padding: 0 0;
+  }
+  .re-buttons button i {
+  display: none;
+  }
+  .ucanslide{
+    display: block;
+  }
 }
 
 @media screen and (max-width: 1870px) {
@@ -614,6 +679,8 @@ nav {
   }
 }
 
+
+/* other */
 .dshow {
   transition: 1s;
   transform: translateX(0%);
@@ -630,7 +697,7 @@ nav {
   top: 0;
   left: 0;
   pointer-events: none;
-  z-index: 99999999; /* so that it stays on top of all other elements */
+  z-index: 99999999; 
   display: none;
 }
 
@@ -641,3 +708,4 @@ nav {
 .navshow {
   transform: translateY(0%);
 }
+

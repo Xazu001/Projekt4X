@@ -1,3 +1,5 @@
+// slides top-section
+
 var counter = 1;
 setInterval(function () {
     document.getElementById('radio' + counter).checked = true;
@@ -17,7 +19,7 @@ const observer = new IntersectionObserver((entries) => {
     })
 })
 
-
+//join us mouseshadow
 const hiddenElements = document.querySelectorAll('.dhid');
 hiddenElements.forEach((el) => observer.observe(el));
 
@@ -81,6 +83,8 @@ function mouseshadow() {
     requestAnimationFrame(mouseshadow);
 }
 
+
+// btgmenu animation and fix
 const animationFrames = [
     {
         transform: "translateX(0%)"
@@ -103,14 +107,10 @@ function toggleBtg(shouldBeShown) {
     if (shouldBeShown) {
         btgmain.style.display = "block";
         btgmain.animate([animationFrames[1], animationFrames[0]], animationSettings);
-        // document.querySelector("main").style.display = "none";
-        // document.querySelector("nav").classList.add("navposition")
     }
     else {
         btgmain.animate(animationFrames, animationSettings).finished.then(() => {
             btgmain.style.display = "none";
-            // document.querySelector("main").style.display = "block";
-            // document.querySelector("nav").classList.remove("navposition")
         });
     }
 }
@@ -154,8 +154,6 @@ function menuclick() {
     const btgmain = document.querySelector(".btgmenu");
     btgmain.animate(animationFrames, animationSettings).finished.then(() => {
         btgmain.style.display = "none";
-        // document.querySelector("main").style.display = "block";
-        // document.querySelector("nav").classList.remove("navposition")
     });
 };
 
@@ -167,11 +165,9 @@ function chngicon() {
     if (isNavBarLocked) {
         document.querySelector(".fa-solid").classList.remove("fa-bars")
         document.querySelector(".fa-solid").classList.add("fa-x")
-        // isNavBarLocked = false;
     } else {
         document.querySelector(".fa-solid").classList.remove("fa-x")
         document.querySelector(".fa-solid").classList.add("fa-bars")
-        // isNavBarLocked = true;
     }
 }
 function chngicon2() {
@@ -179,22 +175,14 @@ function chngicon2() {
     document.querySelector(".fa-solid").classList.add("fa-bars")
 }
 
+
+
+// reviews
+
 let slcounter = 3;
 
-document.querySelector(".re-buttons .fa-angle-left").addEventListener("click", () => updateSlide(slcounter - 1));
-document.querySelector(".re-buttons .fa-angle-right").addEventListener("click", () => updateSlide(slcounter + 1));
-
-
-// function updateSlide(num) {
-//     const isRight = (slcounter - num) == -1;
-//     if (isRight && slcounter == 5) return;
-//     if (!isRight && slcounter == 1) return;
-//     slcounter = num;
-//     const reSlides = document.querySelector(".re-slides");
-//     const slideWidth = window.innerWidth < 992 ? 100 : 50;
-//     const wholeSlideWidth = window.innerWidth < 992 ? 300 : 150
-//     reSlides.style.transform = `translateX(${wholeSlideWidth - slcounter * slideWidth}%)`;
-// }
+document.querySelector(".slbutton-left").addEventListener("click", () => updateSlide(slcounter - 1));
+document.querySelector(".slbutton-right").addEventListener("click", () => updateSlide(slcounter + 1));
 
 let reSlides = document.querySelector(".re-slides").classList;
 function updateSlide(num) {
@@ -219,5 +207,19 @@ function updateSlide(num) {
         reSlides.remove("sltwo", "slthree", "slfour", "slone")
         reSlides.add("slfive")
     }
+
+}
+
+document.querySelector(".our-team-main").addEventListener("mouseover", slideDissappear)
+document.querySelector(".our-team-main").addEventListener("mouseout", slideAppear)
+
+
+function slideDissappear() {
+    document.querySelector(".ucanslide").classList.add("noopacity");
+
+}
+
+function slideAppear() {
+    document.querySelector(".ucanslide").classList.remove("noopacity");
 
 }
