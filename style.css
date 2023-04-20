@@ -194,6 +194,10 @@ align-items: center;
   z-index: -10;
 }
 
+/* *{
+  transition: 1s;
+} */
+
 .whyus h1 {
   margin-left: 10%;
   font-size: 4rem;
@@ -483,7 +487,7 @@ align-items: center;
 
 .reviews {
   position: relative;
-  height: 400px;
+  height: 500px;
   width: 100%;
   overflow: hidden;
 }
