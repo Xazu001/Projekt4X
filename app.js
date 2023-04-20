@@ -223,3 +223,42 @@ function slideAppear() {
     document.querySelector(".ucanslide").classList.remove("noopacity");
 
 }
+
+// let coloursIcon = document.querySelectorAll(".colours i");
+let coloursIconRotated = false;
+
+document.querySelectorAll(".colours i").forEach(i => i.addEventListener("click", coloursIconShow));
+
+function coloursIconShow() {
+    if (coloursIconRotated == false) {
+        document.querySelectorAll(".colours i").forEach(i => i.classList.add("coloursiconrotate"));
+        coloursIconRotated = true;
+        document.querySelectorAll(".colouricon").forEach(i => i.classList.add("coloursshow"));
+        console.log("clicked");
+    } else {
+        document.querySelectorAll(".colours i").forEach(i => i.classList.remove("coloursiconrotate"));
+        coloursIconRotated = false;
+        document.querySelectorAll(".colouricon").forEach(i => i.classList.remove("coloursshow"));
+        console.log("clicked");
+    }
+}
+
+document.querySelectorAll(".cgreen").forEach(i => i.addEventListener("click", cgreen));
+document.querySelectorAll(".cpurple").forEach(i => i.addEventListener("click", cpurple));
+document.querySelectorAll(".cblue").forEach(i => i.addEventListener("click", cblue));
+
+function cgreen() {
+    console.log("green");
+    const root = document.querySelector(":root");
+    root.style.setProperty('--mainwb-color', 'rgba(0, 150, 0, 1)');
+}
+
+function cpurple() {
+    const root = document.querySelector(":root");
+    root.style.setProperty('--mainwb-color', 'rgba(120, 75, 255, 1)');
+}
+
+function cblue() {
+    const root = document.querySelector(":root");
+    root.style.setProperty('--mainwb-color', 'rgba(0, 75, 255, 1)');
+}

@@ -11,32 +11,47 @@
       src="https://kit.fontawesome.com/32c9f61420.js"
       crossorigin="anonymous"
     ></script>
-    <script defer src="app.js"></script>
+    <script defer src="skillsapp.js"></script>
     <link rel="icon" href="xlogo.png" />
     <link rel="stylesheet" href="skills.css" />
   </head>
   <body>
     <nav id="menu" class="navshow">
-      <div class="nav-left">
-        <ul>
-          <li class="nav-item"><a href="index.html">MENU</a></li>
-          <li class="nav-item"><a href="#welcome">ABOUT ME</a></li>
-        </ul>
+      <div class="nav-main">
+        <div class="nav-left">
+          <div class="colours">
+            <i class="fa-solid fa-angle-right"></i>
+            <div class="colourbox">
+              <div class="colouricon cgreen"></div>
+              <div class="colouricon cpurple"></div>
+              <div class="colouricon cblue"></div>
+            </div>
+           
+          </div>
+          <ul>
+            <li class="nav-item"><a href="index.html">MENU</a></li>
+            <li class="nav-item"><a href="#welcome">ABOUT ME</a></li>
+          </ul>
+        </div>
+        <div><a href="index.html" class="x">X</a></div>
+        <div class="nav-right">
+          <ul>
+            <li class="nav-item"><a href="skills.html">SKILLS</a></li>
+            <li class="nav-item"><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
+        <button class="btg-icon"><i class="fa-solid fa-bars"></i></button>
       </div>
-      <div><a href="index.html" class="x">X</a></div>
-      <div class="nav-right">
-        <ul>
-          <li class="nav-item"><a href="#">SKILLS</a></li>
-          <li class="nav-item"><a href="#">CONTACT</a></li>
-        </ul>
-      </div>
-      <button class="btg-icon"><i class="fa-solid fa-bars"></i></button>
     </nav>
     <section class="btgmenu" style="display: none">
       <div class="btgmenu-main">
         <div class="btgpasek"></div>
         <a href="index.html"><h1>menu</h1></a>
         <a href="skills.html"><h1>skills</h1></a>
+        <div class="colourbox">
+          <div class="colouricon cgreen"></div>
+          <div class="colouricon cpurple"></div>
+          <div class="colouricon cblue"></div>
       </div>
     </section>
     <section class="top-section">
@@ -139,6 +154,8 @@
     </main>
 
     <script>
+
+
       const text = ["NOTHING TO SEE HERE... ", "YET"];
 
       const element = document.querySelector(".nothing h1");

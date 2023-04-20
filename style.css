@@ -35,11 +35,73 @@ nav {
   z-index: 999 !important;
 }
 
+.colours i{
+  color: var(--mainwb-color);
+  font-size: 20px;
+  transform: rotate(-90deg);
+  margin-right: 2px;
+  transition: 1s;
+}
+
+.coloursiconrotate{
+  transform: rotate(0deg) !important;
+}
+
+.colours{
+position: absolute;
+left: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.colourbox{
+  height: 20px;
+  width: 60px;
+  overflow: hidden;
+  gap: 2px;
+  display: flex;
+}
+
+.colouricon:nth-child(1){
+  background-color: rgba(0, 150, 0, 1);
+  transition: 1s;
+}
+.colouricon:nth-child(2){
+  background-color: rgba(120, 75, 255, 1);
+  transition: 1.5s;
+}
+.colouricon:nth-child(3){
+  background-color: rgba(0, 75, 255, 1);
+  transition: 2s;
+}
+
+.colouricon{
+  border: 2px solid white;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  transform: translateX(-60px);
+}
+
+.coloursshow{
+  transform: translateX(0%);
+}
+
+.nav-main{
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
 .nav-left,
 .nav-right {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 
 .nav-item,
@@ -538,6 +600,26 @@ width: 80% !important;
   :root {
     font-size: 9px;
   }
+  .btgmenu-main{
+    display: flex !important;
+    flex-direction: column;
+    height: 100%;
+  }
+  .colourbox{
+    align-self: center;
+    gap: 20px;
+    width: 120px;
+    height: 50px;
+    margin-top: 200px;
+  }
+  .colouricon{
+    width: 30px;
+    height: 30px;
+  justify-self: flex-end;
+  transform: translateX(0);
+  border: none;
+  }
+
   .re-block{
     min-width: 100%;
   }
@@ -567,6 +649,11 @@ width: 80% !important;
   nav {
     justify-content: space-between;
     position: fixed;
+    z-index: 15;
+  }
+
+  .nav-main {
+    justify-content: space-between;
     z-index: 15;
   }
   .btg-icon {
@@ -625,7 +712,7 @@ width: 80% !important;
     font-size: 2rem !important;
   }
   .deseczka {
-    width: 50%;
+    width: 300px;
   }
   .footer {
     flex-direction: column;
