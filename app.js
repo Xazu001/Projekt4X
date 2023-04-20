@@ -163,16 +163,16 @@ document.querySelectorAll(".btgmenu-main a").forEach(i => i.addEventListener("cl
 
 function chngicon() {
     if (isNavBarLocked) {
-        document.querySelector(".fa-solid").classList.remove("fa-bars")
-        document.querySelector(".fa-solid").classList.add("fa-x")
+        document.querySelector(".btg-icon i").classList.remove("fa-bars")
+        document.querySelector(".btg-icon i").classList.add("fa-x")
     } else {
-        document.querySelector(".fa-solid").classList.remove("fa-x")
-        document.querySelector(".fa-solid").classList.add("fa-bars")
+        document.querySelector(".btg-icon i").classList.remove("fa-x")
+        document.querySelector(".btg-icon i").classList.add("fa-bars")
     }
 }
 function chngicon2() {
-    document.querySelector(".fa-solid").classList.remove("fa-x")
-    document.querySelector(".fa-solid").classList.add("fa-bars")
+    document.querySelector(".btg-icon i").classList.remove("fa-x")
+    document.querySelector(".btg-icon i").classList.add("fa-bars")
 }
 
 

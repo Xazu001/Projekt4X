@@ -147,3 +147,20 @@ function chngicon2() {
     document.querySelector(".fa-solid").classList.remove("fa-x")
     document.querySelector(".fa-solid").classList.add("fa-bars")
 }
+
+document.querySelector(".btg-icon").addEventListener("click", chngicon);
+document.querySelectorAll(".btgmenu-main a").forEach(i => i.addEventListener("click", chngicon2));
+
+function chngicon() {
+    if (isNavBarLocked) {
+        document.querySelector(".btg-icon i").classList.remove("fa-bars")
+        document.querySelector(".btg-icon i").classList.add("fa-x")
+    } else {
+        document.querySelector(".btg-icon i").classList.remove("fa-x")
+        document.querySelector(".btg-icon i").classList.add("fa-bars")
+    }
+}
+function chngicon2() {
+    document.querySelector(".btg-icon i").classList.remove("fa-x")
+    document.querySelector(".btg-icon i").classList.add("fa-bars")
+}
