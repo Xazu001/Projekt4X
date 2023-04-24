@@ -372,7 +372,7 @@ align-items: center;
   margin-bottom: calc(24px * 2);
 }
 
-.joinus input {
+#email {
   width: 300px;
   margin-bottom: 24px;
   transform: skewX(-25deg);
@@ -385,6 +385,23 @@ align-items: center;
   background-color: white;
   transition: 0.5s;
 }
+
+#textarea {
+  width: 300px;
+  height: 100px;
+  margin-bottom: 24px;
+  border-top: 3px solid #131313;
+  border: none;
+  padding: 6px 12px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: white;
+  transition: 0.5s;
+  resize: none;
+  overflow: hidden;
+}
+
 
 .joinus button {
   padding: 6px 12px;
@@ -407,18 +424,26 @@ align-items: center;
   box-shadow: 0 0 10px black;
 }
 
-.joinus input:focus::-webkit-input-placeholder {
+#email:focus::-webkit-input-placeholder {
   opacity: 0;
 }
 
-.joinus input::placeholder {
+#email::placeholder {
   color: #131313;
 }
 
-.joinus input:focus {
+#email:focus {
   outline: none;
   box-shadow: 0 0 10px black;
 }
+
+#textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px black;
+}
+
+
+
 
 .footer {
   display: flex;
@@ -768,7 +793,10 @@ width: 80% !important;
   .our-team-block {
     min-width: 100%;
   }
-  .joinus input {
+  #email {
+    width: 80vw;
+  }
+  #textarea {
     width: 80vw;
   }
 }
