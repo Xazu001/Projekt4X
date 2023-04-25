@@ -262,3 +262,11 @@ function cblue() {
     const root = document.querySelector(":root");
     root.style.setProperty('--mainwb-color', 'rgba(0, 75, 255, 1)');
 }
+
+document.querySelector(".slbutton-left").addEventListener("click", () => {
+    document.querySelector(".re-ucanclickhere").style.display = "none";
+});
+document.querySelector(".slbutton-right").addEventListener("click", () => {
+    document.querySelector(".re-ucanclickhere").style.display = "none";
+});
+
