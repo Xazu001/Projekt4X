@@ -164,3 +164,35 @@ function chngicon2() {
     document.querySelector(".btg-icon i").classList.remove("fa-x")
     document.querySelector(".btg-icon i").classList.add("fa-bars")
 }
+
+
+function onLoad() {
+    const colour = JSON.parse(localStorage.getItem("mainwbColor"));
+    document.querySelector(":root").style.setProperty('--mainwb-color', colour);
+}
+
+let mainwbColor = '';
+
+
+function cgreen() {
+    console.log("green");
+    mainwbColor = "rgba(0, 150, 0, 1)";
+    const root = document.querySelector(":root");
+    root.style.setProperty('--mainwb-color', mainwbColor);
+    localStorage.setItem("mainwbColor", JSON.stringify(mainwbColor));
+    return mainwbColor;
+}
+
+function cpurple() {
+    const root = document.querySelector(":root");
+    mainwbColor = 'rgba(120, 75, 255, 1)';
+    localStorage.setItem("mainwbColor", JSON.stringify(mainwbColor));
+    root.style.setProperty('--mainwb-color', mainwbColor);
+}
+
+function cblue() {
+    const root = document.querySelector(":root");
+    mainwbColor = "rgba(0, 75, 255, 1)";
+    localStorage.setItem("mainwbColor", JSON.stringify(mainwbColor));
+    root.style.setProperty('--mainwb-color', mainwbColor);
+}
