@@ -20,22 +20,6 @@ document.querySelectorAll(".cgreen").forEach(i => i.addEventListener("click", cg
 document.querySelectorAll(".cpurple").forEach(i => i.addEventListener("click", cpurple));
 document.querySelectorAll(".cblue").forEach(i => i.addEventListener("click", cblue));
 
-function cgreen() {
-    console.log("green");
-    const root = document.querySelector(":root");
-    root.style.setProperty('--mainwb-color', 'rgba(0, 150, 0, 1)');
-}
-
-function cpurple() {
-    const root = document.querySelector(":root");
-    root.style.setProperty('--mainwb-color', 'rgba(120, 75, 255, 1)');
-}
-
-function cblue() {
-    const root = document.querySelector(":root");
-    root.style.setProperty('--mainwb-color', 'rgba(0, 75, 255, 1)');
-}
-
 
 var counter = 1;
 setInterval(function () {
