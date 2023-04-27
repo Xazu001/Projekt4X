@@ -17,9 +17,8 @@
 
 .cards-box{
     display: flex;
-    gap: 30px;
     max-width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 0 24px;
     flex-wrap: wrap;
     
@@ -81,6 +80,10 @@
 @media screen and (max-width: 1260px){
     .card-item{
         width: 100%;
+    }
+    .cards-box{
+        justify-content: center;
+        gap: 30px;
     }
 }
 

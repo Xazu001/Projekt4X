@@ -154,6 +154,7 @@ function onLoad() {
     const colour = JSON.parse(localStorage.getItem("mainwbColor"));
     document.querySelector(":root").style.setProperty('--mainwb-color', colour);
 }
+onLoad();
 
 let mainwbColor = '';
 
