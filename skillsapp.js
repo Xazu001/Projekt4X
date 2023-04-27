@@ -103,7 +103,7 @@ window.addEventListener("scroll", () => {
     lastScrollY = window.scrollY;
 })
 
-
+let isNavBarLocked = false;
 document.querySelectorAll("a").forEach(i => i.addEventListener("click", menuclick));
 
 function menuclick() {
@@ -180,3 +180,46 @@ function cblue() {
     localStorage.setItem("mainwbColor", JSON.stringify(mainwbColor));
     root.style.setProperty('--mainwb-color', mainwbColor);
 }
+
+
+
+// const cardItemHeightOne = document.querySelectorAll('.card-item')[0].offsetHeight;
+// const cardItemHeightTwo = document.querySelectorAll('.card-item')[1].offsetHeight;
+// const cardItemHeightThree = document.querySelectorAll('.card-item')[2].offsetHeight;
+
+// const arrHeights = [cardItemHeightOne, cardItemHeightTwo, cardItemHeightThree];
+// arrHeights.sort();
+
+
+// if (screen.width < 1260) {
+//     console.log("aaaa");
+//     var heightValue = arrHeights[2];
+//     document.querySelectorAll(".card-item").forEach(i => i.style.height = heightValue + "px");
+
+// }
+if (screen.width < 1260) {
+    const cardItemHeightOne = document.querySelectorAll('.card-item')[0].offsetHeight;
+    const cardItemHeightTwo = document.querySelectorAll('.card-item')[1].offsetHeight;
+    const cardItemHeightThree = document.querySelectorAll('.card-item')[2].offsetHeight;
+
+    const arrHeights = [cardItemHeightOne, cardItemHeightTwo, cardItemHeightThree];
+    arrHeights.sort();
+    var heightValue = arrHeights[2];
+    document.querySelectorAll(".card-item").forEach(i => i.style.height = heightValue + "px");
+
+}
+
+// setInterval(() => {
+//     if (screen.width < 1260) {
+//         const cardItemHeightOne = document.querySelectorAll('.card-item')[0].offsetHeight;
+//         const cardItemHeightTwo = document.querySelectorAll('.card-item')[1].offsetHeight;
+//         const cardItemHeightThree = document.querySelectorAll('.card-item')[2].offsetHeight;
+
+//         const arrHeights = [cardItemHeightOne, cardItemHeightTwo, cardItemHeightThree];
+//         arrHeights.sort();
+//         console.log("aaaa");
+//         var heightValue = arrHeights[2];
+//         document.querySelectorAll(".card-item").forEach(i => i.style.height = heightValue + "px");
+
+//     }
+// }, 5000);
