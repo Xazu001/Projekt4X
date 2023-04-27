@@ -1,13 +1,36 @@
 // slides top-section
+// var intervalValue = 10000;
+// var counter = 1;
+// document.querySelectorAll(".manual-btn").forEach(i => i.addEventListener("click", () => {
+//     intervalValue = 10000;
+// }))
 
+// setInterval(function () {
+//     document.getElementById('radio' + counter).checked = true;
+//     counter++;
+//     if (counter > 3) {
+//         counter = 1;
+//     }
+// }, intervalValue)
+var intervalValue = 10000;
 var counter = 1;
-setInterval(function () {
+var intervalId = setInterval(slide, intervalValue);
+
+document.querySelectorAll(".manual-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        counter = 1;
+        clearInterval(intervalId);
+        intervalId = setInterval(slide, intervalValue);
+    });
+});
+
+function slide() {
     document.getElementById('radio' + counter).checked = true;
     counter++;
     if (counter > 3) {
         counter = 1;
     }
-}, 10000)
+}
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry)
